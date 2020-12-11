@@ -1,5 +1,5 @@
 package kr.co.haksa.dao;
 
-public interface SungjukDao {
+public class SungjukDao {
 
 }

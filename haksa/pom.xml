@@ -116,7 +116,6 @@
 			<version>4.7</version>
 			<scope>test</scope>
 		</dependency>  
-
 		<!-- JDBC -->
 		
 		<dependency>
@@ -125,7 +124,7 @@
 			<version>4.1.4.RELEASE</version>
 		</dependency>
 		     
-		 <!-- myBatis  : ?ㅽ봽留걂dbc ???곌껐?섏뼱 ?뉖떎-->
+		 <!-- myBatis  : 스프링jdbc 랑 연결되어 잇다-->
 		 <dependency>
 		    <groupId>org.mybatis</groupId>
 		    <artifactId>mybatis</artifactId>
@@ -136,25 +135,19 @@
 		   <artifactId>mybatis-spring</artifactId>
 		   <version>1.2.2</version>
 		 </dependency>
-         <!-- mybatis  2媛?-->   
-
-		<!-- 파일 업로드  -->
+         <!-- mybatis  2개 -->  
+		  <!-- 파일업로드 -->
 		<dependency>
 		  <groupId>servlets.com</groupId>
 		  <artifactId>cos</artifactId>
 		  <version>05Nov2002</version>
-		</dependency>     
-	
+		</dependency>   
+		
 		<dependency>
-		  <groupId>javax.mail</groupId>
+          <groupId>javax.mail</groupId>
 		  <artifactId>mail</artifactId>
 		  <version>1.4.7</version>
-		</dependency> 
-
-
-
-
-     
+        </dependency>        
 	</dependencies>
     <build>
         <plugins>

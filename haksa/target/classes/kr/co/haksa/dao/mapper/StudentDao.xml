@@ -2,30 +2,33 @@
 <!DOCTYPE mapper
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybats-3-mapper.dtd">
-<mapper namespace="kr.co.haksa.dao.StudentDao">	<!-- 사용할 인터페이스 -->
+<mapper namespace="kr.co.haksa.dao.StudentDao">
 
-	<insert id="write_ok" parameterType="kr.co.haksa.dto.StudentDto">
-		insert into student(hakbun,name,zip,juso,juso_etc,hphone,birth,writeday)
-		values(#{hakbun},#{name},#{zip},#{juso},#{juso_etc},#{hphone},#{birth},now())
-	</insert>
-
-	<select id="list" resultType="kr.co.haksa.dto.StudentDto">
+   <insert id="swrite_ok" parameterType="kr.co.haksa.dto.StudentDto">
+     insert into student(name,hakbun,zip,juso,juso_etc,hphone,birth,writeday)
+     values(#{name},#{hakbun},#{zip},#{juso},#{juso_etc},#{hphone},#{birth},now())
+   </insert>
+   
+   <select id="get_hakbun" resultType="String">
+     select substring(max(hakbun),6,3) from student;
+   </select>
+   
+   <select id="slist" resultType="kr.co.haksa.dto.StudentDto">
 		select * from student
 	</select>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
 </mapper>
