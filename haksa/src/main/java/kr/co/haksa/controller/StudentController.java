@@ -32,10 +32,10 @@ public class StudentController {
 	@RequestMapping("/student/swrite_ok")
 	public String swrite_ok(StudentDto sdto)
 	{
-		StudentDao sdao=sqlSession.getMapper(StudentDao.class);
+		StudentDao sddao=sqlSession.getMapper(StudentDao.class);
 		// 학번만들기
 		String year="2020";
-		String number=sdao.get_hakbun(year);
+		String number=sddao.get_hakbun(year);
 		String hakbun=null; // 추가상품의 완성된 코드를 저장
 		if(number==null)
 			hakbun=year+"001";
@@ -53,7 +53,7 @@ public class StudentController {
 			    	    hakbun=year+num;
 	    }             
 	    sdto.setHakbun(hakbun);
-		sdao.swrite_ok(sdto);
+		sddao.swrite_ok(sdto);
 		return "redirect:/student/slist";
 	}
 	

@@ -4,4 +4,19 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybats-3-mapper.dtd">
 <mapper namespace="kr.co.haksa.dao.SungjukDao">
 
+	<select id="input" resultType="kr.co.haksa.dto.SungjukDto">
+		select * from student
+	</select>
+	
+	<insert id="input_ok" parameterType="kr.co.haksa.dto.SungjukDto">
+	
+	</insert>
+	
+
+
+
+
+
+
+
 </mapper>
