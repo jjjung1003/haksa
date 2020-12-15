@@ -22,17 +22,19 @@ public class SungjukController {
 	public SqlSession sqlSession;
 	
 	@RequestMapping("/sungjuk/input")
-	public String input(StudentDto sdto,Model model)
+	public String input(StudentDto sdto,Model model,HttpServletRequest request)
 	{
 		SungjukDao sjdao=sqlSession.getMapper(SungjukDao.class);
 		ArrayList<StudentDto> list=sjdao.input(sdto);
-		model.addAttribute("list", list);
+		model.addAttribute("list", list);				
 		return "/sungjuk/input";
 	}
 	
 	@RequestMapping("/sungjuk/input_ok")
-	public String input_ok()
+	public String input_ok(SungjukDto sjdto)
 	{
+		SungjukDao sjdao=sqlSession.getMapper(SungjukDao.class);
+		sjdao.input_ok(sjdto);
 		return "redirect:/sungjuk/input";
 	}
 	

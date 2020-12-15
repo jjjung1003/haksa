@@ -2,10 +2,26 @@ package kr.co.haksa.dto;
 
 public class SungjukDto {
 
-	private int id, kor, eng, mat, sci, mus, hap, avg;
-	private String name, hakbun;
+	private int id, kor, eng, mat, sci, mus, tot, avg;
+	private String name, hakbun, writeday;
 	
 	
+
+	public int getTot() {
+		return tot;
+	}
+
+	public void setTot(int tot) {
+		this.tot = tot;
+	}
+
+	public String getWriteday() {
+		return writeday;
+	}
+
+	public void setWriteday(String writeday) {
+		this.writeday = writeday;
+	}
 
 	public String getName() {
 		return name;
@@ -69,14 +85,6 @@ public class SungjukDto {
 
 	public void setMus(int mus) {
 		this.mus = mus;
-	}
-
-	public int getHap() {
-		return hap;
-	}
-
-	public void setHap(int hap) {
-		this.hap = hap;
 	}
 
 	public int getAvg() {

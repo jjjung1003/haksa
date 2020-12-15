@@ -9,8 +9,10 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</select>
 	
 	<insert id="input_ok" parameterType="kr.co.haksa.dto.SungjukDto">
-	
+		insert into sungjuk(name,hakbun,kor,eng,mat,sci,mus,tot,avg,writeday)
+		values(#{name},#{hakbun},#{kor},#{eng},#{mat},#{sci},#{mus},#{tot},#{avg},now())
 	</insert>
+
 	
 
 
