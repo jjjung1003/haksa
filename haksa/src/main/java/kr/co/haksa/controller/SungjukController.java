@@ -38,7 +38,14 @@ public class SungjukController {
 		return "redirect:/sungjuk/input";
 	}
 	
-
+	@RequestMapping("/sungjuk/sungjuk_view")
+	public String sungjuk_view(Model model)
+	{
+		SungjukDao sjdao=sqlSession.getMapper(SungjukDao.class);
+		ArrayList<SungjukDto> list=sjdao.sungjuk_view();
+		model.addAttribute("list", list);
+		return "sungjuk/sungjuk_view";
+	}
 	
 	
 	

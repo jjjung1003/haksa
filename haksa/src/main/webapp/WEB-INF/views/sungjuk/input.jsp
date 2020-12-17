@@ -28,6 +28,7 @@
 		var mus=document.getElementsByClassName("mus")[num].value;
 		var tot=Number(kor)+Number(eng)+Number(mat)+Number(sci)+Number(mus);
 		var avg=tot/5;
+		
 		document.getElementsByClassName("avg")[num].value=avg;
 	}
 </script>

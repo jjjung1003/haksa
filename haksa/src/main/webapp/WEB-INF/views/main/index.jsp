@@ -18,7 +18,7 @@
       <li> 성적관리  
         <ul>
           <li> <a href="../sungjuk/input"> 성적입력 </a></li>
-          <li> 성적표조회 </li>
+          <li> <a href="../sungjuk/sungjuk_view"> 성적표조회 </a></li>
         </ul>
       </li>
     </ul>

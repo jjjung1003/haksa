@@ -11,6 +11,8 @@ public interface SungjukDao {
 
 	public void input_ok(SungjukDto sjdto);
 
+	public ArrayList<SungjukDto> sungjuk_view();
+
 	
 	
 	
